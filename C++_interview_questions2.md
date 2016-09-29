@@ -276,7 +276,7 @@ a.getC();
 a.sum(); //提示访问限制，无法访问sum函数。
 a.b;//提示访问限制，无法访问b
 ```
-如果有B类public继承A类，则A中的所有内容的访问限制被B继承，如果是protected继承，那么public域会变成protected，如果是private继承，那么public域和protected域都会变成private域。如果不加关键词，默认使用protected继承。即``class B:A``等价于``class B: protected A``
+如果有B类public继承A类，则A中的所有内容的访问限制被B继承，如果是protected继承，那么public域会变成protected，如果是private继承，那么public域和protected域都会变成private域。如果不加关键词，struct默认使用public继承，class默认使用private继承。即``class B:A``等价于``class B: private A``
 
 ## 35. auto_ptr类
 属于智能指针类，在C++11版本之后，就变成了shared_ptr和unique_ptr。在C++11中，auto_ptr被置为deprecated。
