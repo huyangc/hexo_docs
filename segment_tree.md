@@ -35,7 +35,7 @@ public:
 	SegmentTreeNode(int start,int end):start(start),end(end),left(nullptr),right(nullptr),sum(0){}
 };
 ```
-有了字典树的节点信息，我们需要考虑的就是怎样构建一棵字典树，首先可以看到，一个字典树一般是从中间划分开，即若有``mid = (start+end)/2`` 那么一般该节点的左子结点的start和end是 start mid,然后该节点的右子节点的start和end分别是 mid+1和end，所以我们下面可以通过一个递归的方式进行树的构建。
+有了线段树的节点信息，我们需要考虑的就是怎样构建一棵线段树，首先可以看到，一个线段树一般是从中间划分开，即若有``mid = (start+end)/2`` 那么一般该节点的左子结点的start和end是 start mid,然后该节点的右子节点的start和end分别是 mid+1和end，所以我们下面可以通过一个递归的方式进行树的构建。
 ```C++
 SegmentTreeNode* buildTree(vector<int>& nums,int start,int end){
 	if(start>end)
